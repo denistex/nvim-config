@@ -11,6 +11,17 @@ M.ui = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+
+  term = {
+    float = {
+      relative = "editor",
+      row = 0.2,
+      col = 0.05,
+      width = 0.9,
+      height = 0.6,
+      border = "single",
+    },
+  },
 }
 
 return M
