@@ -7,6 +7,19 @@ return {
     end,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        winblend = 10,
+        layout_strategy = "vertical",
+        layout_config = {
+          preview_cutoff = 50,
+        },
+      },
+    },
+  },
+
   -- These are some examples, uncomment them if you want to see them work!
   -- {
   --   "neovim/nvim-lspconfig",
