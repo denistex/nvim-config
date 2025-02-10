@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    -- event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -91,5 +91,25 @@ return {
   {
     "folke/zen-mode.nvim",
     cmd = { "ZenMode" },
+  },
+
+  {
+    "stevearc/aerial.nvim",
+    cmd = { "AerialToggle" },
+    opts = function()
+      return require "configs.aerial"
+    end,
+  },
+
+  {
+    "goolord/alpha-nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim"
+    },
+    lazy = false,
+    config = function ()
+      require("alpha").setup(require("alpha.themes.startify").config)
+    end
   },
 }
